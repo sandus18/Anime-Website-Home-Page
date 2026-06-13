@@ -1,47 +1,505 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anime</title>
+    <title>AniVerse — Stream Anime</title>
+    <!-- icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- bootstrap cdn -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
- <!-- navbar -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Genre
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-       
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-       button>
-      </form>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Ani<span class="brand-accent">Verse</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#top-ten">Top 10</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Genre
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Fantasy</a></li>
+                            <li><a class="dropdown-item" href="#">Romance</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Slice of Life</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex search-form" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search titles" aria-label="Search" />
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- hero section -->
+    <div id="carouselExampleAutoplaying" class="carousel slide hero-carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- anime 1 -->
+            <div class="carousel-item active">
+                <div class="carousel-row">
+                    <div class="carouselContent d-flex flex-column text-center">
+                        <span class="contentEyebrow">Now Streaming · Episode 1100+</span>
+                        <h2 class="contentHeading">One Piece</h2>
+                        <p class="contentPara">Follow Monkey D. Luffy and the Straw Hat crew as they sail the Grand
+                            Line in search of the legendary treasure, the One Piece.</p>
+                        <div class="contentTags">
+                            <span class="tag">Action</span>
+                            <span class="tag">Adventure</span>
+                            <span class="tag">Fantasy</span>
+                        </div>
+                        <button class="contentButton">Watch Now</button>
+                    </div>
+                    <div class="carouselImage">
+                        <img src="./images/one piece.jpeg" class="img-fluid d-block w-100" alt="One Piece">
+                    </div>
+                </div>
+            </div>
+            <!-- anime 2 -->
+            <div class="carousel-item">
+                <div class="carousel-row">
+                    <div class="carouselImage order-lg-1">
+                        <img src="./images/Demon Slayer.jpeg" class="img-fluid d-block w-100" alt="Demon Slayer">
+                    </div>
+                    <div class="carouselContent d-flex flex-column text-center order-lg-2">
+                        <span class="contentEyebrow">Now Streaming · Season 4</span>
+                        <h2 class="contentHeading">Demon Slayer</h2>
+                        <p class="contentPara">Tanjiro Kamado joins the Demon Slayer Corps to avenge his family and
+                            find a cure for his demon-turned sister, Nezuko.</p>
+                        <div class="contentTags">
+                            <span class="tag">Action</span>
+                            <span class="tag">Supernatural</span>
+                            <span class="tag">Drama</span>
+                        </div>
+                        <button class="contentButton">Watch Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- anime 3 -->
+            <div class="carousel-item">
+                <div class="carousel-row">
+                    <div class="carouselImage order-lg-1">
+                        <img src="./images/jujutsu kaisen .jpeg" class="img-fluid d-block w-100" alt="Jujutsu Kaisen">
+                    </div>
+                    <div class="carouselContent d-flex flex-column text-center order-lg-2">
+                        <span class="contentEyebrow">Now Streaming · Season 2</span>
+                        <h2 class="contentHeading">Jujutsu Kaisen</h2>
+                        <p class="contentPara">Yuji Itadori joins a secret organization of Jujutsu Sorcerers to
+                            eliminate a powerful Curse and save those around him.</p>
+                        <div class="contentTags">
+                            <span class="tag">Action</span>
+                            <span class="tag">Supernatural</span>
+                            <span class="tag">School</span>
+                        </div>
+                        <button class="contentButton">Watch Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
     </div>
-  </div>
-</nav>
+
+    <!-- top ten section -->
+    <section id="top-ten" class="top-ten">
+        <div class="container-fluid">
+            <div class="top-ten-header">
+                <span class="contentEyebrow">Updated Weekly</span>
+                <h2 class="section-title">Top 10 This Week</h2>
+            </div>
+            <div id="topTenCarousel" class="carousel slide top-ten-carousel" data-bs-ride="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="rank-row">
+
+                            <div class="rank-card">
+                                <span class="rank-number">01</span>
+                                <div class="rank-poster poster-1">
+                                    <img src="https://i.pinimg.com/736x/f9/e3/24/f9e32495c1106e1cdc4ccbbde007a845.jpg"
+                                        alt="no image">
+                                    <span class="poster-title">One Piece</span>
+                                </div>
+                                <div class="rank-info">
+                                    <h3>One Piece</h3>
+                                    <p class="rank-genre">Action · Adventure · Fantasy</p>
+                                </div>
+                            </div>
+
+                            <div class="rank-card">
+                                <span class="rank-number">02</span>
+                                <div class="rank-poster poster-2">
+                                    <img src="https://i.pinimg.com/736x/27/cc/dc/27ccdc8bb602899338430b68b6fccb97.jpg" alt="no image">
+                                    <span class="poster-title">Jujutsu Kaisen</span>
+                                </div>
+                                <div class="rank-info">
+                                    <h3>Jujutsu Kaisen</h3>
+                                    <p class="rank-genre">Action · Supernatural</p>
+                                </div>
+                            </div>
+
+                            <div class="rank-card">
+                                <span class="rank-number">03</span>
+                                <div class="rank-poster poster-3">
+                                    <img src="https://i.pinimg.com/736x/8d/30/43/8d3043f827ff2ba49d8469d698d74238.jpg">
+                                    <span class="poster-title">Demon Slayer</span>
+                                </div>
+                                <div class="rank-info">
+                                    <h3>Demon Slayer</h3>
+                                    <p class="rank-genre">Action · Drama</p>
+                                </div>
+                            </div>
+
+                            <div class="rank-card">
+                                <span class="rank-number">04</span>
+                                <div class="rank-poster poster-4">
+                                    <img src="https://i.pinimg.com/736x/97/e6/91/97e6917c4519ab0ae10d484034c556ef.jpg" alt="no image">
+                                    <span class="poster-title">Attack on Titan</span>
+                                </div>
+                                <div class="rank-info">
+                                    <h3>Attack on Titan</h3>
+                                    <p class="rank-genre">Action · Mystery</p>
+                                </div>
+                            </div>
+
+                            <div class="rank-card">
+                                <span class="rank-number">05</span>
+                                <div class="rank-poster poster-5">
+                                    <img src="https://i.pinimg.com/736x/de/8f/52/de8f52414e86a41879535b1fd2030db7.jpg">
+                                    <span class="poster-title">Chainsaw Man</span>
+                                </div>
+                                <div class="rank-info">
+                                    <h3>Chainsaw Man</h3>
+                                    <p class="rank-genre">Action · Horror</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="rank-row">
+
+                            <div class="rank-card">
+                                <span class="rank-number">06</span>
+                                <div class="rank-poster poster-6">
+                                    <img src="https://i.pinimg.com/736x/b2/f8/02/b2f802fd23a7827782f2d40250b59c49.jpg" alt="no image">
+                                    <span class="poster-title">Spy x Family</span>
+                                </div>
+                                <div class="rank-info">
+                                    <h3>Spy x Family</h3>
+                                    <p class="rank-genre">Comedy · Action</p>
+                                </div>
+                            </div>
+
+                            <div class="rank-card">
+                                <span class="rank-number">07</span>
+                                <div class="rank-poster poster-1">
+                                    <img src="https://i.pinimg.com/736x/ae/b8/1e/aeb81e901a22cd9b814671e1a4007c79.jpg" alt="no image">
+                                    <span class="poster-title">Frieren</span>
+                                </div>
+                                <div class="rank-info">
+                                    <h3>Frieren: Beyond Journey's End</h3>
+                                    <p class="rank-genre">Adventure · Fantasy</p>
+                                </div>
+                            </div>
+
+                            <div class="rank-card">
+                                <span class="rank-number">08</span>
+                                <div class="rank-poster poster-2">
+                                    <img src="https://i.pinimg.com/1200x/e9/51/3d/e9513d8fce1ca4f5a51e6954dbbc7a99.jpg" alt="no image">
+                                    <span class="poster-title">My Hero Academia</span>
+                                </div>
+                                <div class="rank-info">
+                                    <h3>My Hero Academia</h3>
+                                    <p class="rank-genre">Action · School</p>
+                                </div>
+                            </div>
+
+                            <div class="rank-card">
+                                <span class="rank-number">09</span>
+                                <div class="rank-poster poster-3">
+                                    <img src="https://i.pinimg.com/736x/65/89/d9/6589d9052e118d58bce5bc124cee9613.jpg" alt="no image">
+                                    <span class="poster-title">Vinland Saga</span>
+                                </div>
+                                <div class="rank-info">
+                                    <h3>Vinland Saga</h3>
+                                    <p class="rank-genre">Action · Drama · History</p>
+                                </div>
+                            </div>
+
+                            <div class="rank-card">
+                                <span class="rank-number">10</span>
+                                <div class="rank-poster poster-4">
+                                    <img src="https://i.pinimg.com/736x/f3/0d/11/f30d111586c2c9033617ac9f7d5f867a.jpg">
+                                    <span class="poster-title">Solo Leveling</span>
+                                </div>
+                                <div class="rank-info">
+                                    <h3>Solo Leveling</h3>
+                                    <p class="rank-genre">Action · Fantasy</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#topTenCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#topTenCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- browse all anime section -->
+
+    <section id="browse" class="browse">
+        <div class="container-fluid">
+            <div class="top-ten-header">
+                <span class="contentEyebrow">Explore The Library</span>
+                <h2 class="section-title">Browse All Anime</h2>
+            </div>
+            <div class="anime-grid">
+
+                <div class="anime-card">
+                    <div class="anime-poster poster-1">
+                        <img src="https://i.pinimg.com/1200x/23/47/13/23471386b3e0007b62b945434bf34f64.jpg" alt="no image">
+                        <span class="poster-title">Naruto</span>
+                        <button class="watch-btn">▶ Watch Now</button>
+                        <div class="poster-badges">
+                        </div>
+                    </div>
+                    <div class="rank-info">
+                        <h3>Naruto</h3>
+                        <p class="rank-genre">Action · Adventure</p>
+                    </div>
+                </div>
+
+                <div class="anime-card">
+                    <div class="anime-poster poster-2">
+                        <img src="https://i.pinimg.com/736x/f6/68/a3/f668a3141dc9ccd4afb7e4545ca1cf6b.jpg" alt="no image">
+                        <span class="poster-title">Hunter x Hunter</span>
+                        <button class="watch-btn">▶ Watch Now</button>
+
+                    </div>
+                    <div class="rank-info">
+                        <h3>Hunter x Hunter</h3>
+                        <p class="rank-genre">Action · Fantasy</p>
+                    </div>
+                </div>
+
+                <div class="anime-card">
+                    <div class="anime-poster poster-3">
+                        <img src="https://i.pinimg.com/1200x/4d/a2/0d/4da20db4674560b5579ee526611c39a7.jpg" alt="no image">
+                        <span class="poster-title">Fullmetal Alchemist</span>
+                        <button class="watch-btn">▶ Watch Now</button>
+
+                    </div>
+                    <div class="rank-info">
+                        <h3>Fullmetal Alchemist: Brotherhood</h3>
+                        <p class="rank-genre">Action · Drama</p>
+                    </div>
+                </div>
+
+                <div class="anime-card">
+                    <div class="anime-poster poster-4">
+                        <img src="https://i.pinimg.com/736x/d3/5c/d0/d35cd006dc40fbb60ecf656d01d88992.jpg" alt="no image">
+                        <span class="poster-title">Death Note</span>
+                        <button class="watch-btn">▶ Watch Now</button>
+
+                    </div>
+                    <div class="rank-info">
+                        <h3>Death Note</h3>
+                        <p class="rank-genre">Mystery · Psychological</p>
+                    </div>
+                </div>
+
+                <div class="anime-card">
+                    <div class="anime-poster poster-5">
+                        <img src="https://i.pinimg.com/736x/9e/cd/93/9ecd93cdde83ca0f7eab78c802461ba7.jpg" alt="no image">
+                        <span class="poster-title">Bleach</span>
+                        <button class="watch-btn">▶ Watch Now</button>
+
+                    </div>
+                    <div class="rank-info">
+                        <h3>Bleach</h3>
+                        <p class="rank-genre">Action · Supernatural</p>
+                    </div>
+                </div>
+
+                <div class="anime-card">
+                    <div class="anime-poster poster-6">
+                        <img src="https://i.pinimg.com/736x/a2/bd/4f/a2bd4f49acce625d3a58998858b4db81.jpg" alt="no image">
+                        <span class="poster-title">Mob Psycho 100</span>
+                        <button class="watch-btn">▶ Watch Now</button>
+
+                    </div>
+                    <div class="rank-info">
+                        <h3>Mob Psycho 100</h3>
+                        <p class="rank-genre">Action · Comedy</p>
+                    </div>
+                </div>
+
+                <div class="anime-card">
+                    <div class="anime-poster poster-7">
+                        <img src="https://i.pinimg.com/1200x/d5/f7/13/d5f7130e2d114af5d8ba1641752730ee.jpg" alt="no image">
+                        <span class="poster-title">Black Clover</span>
+                        <button class="watch-btn">▶ Watch Now</button>
+
+                    </div>
+                    <div class="rank-info">
+                        <h3>Black Clover</h3>
+                        <p class="rank-genre">Action · Fantasy</p>
+                    </div>
+                </div>
+
+                <div class="anime-card">
+                    <div class="anime-poster poster-8">
+                        <img src="https://i.pinimg.com/736x/41/b6/65/41b665a206b1d02f074d79c03d70fa50.jpg" alt="no image">
+                        <span class="poster-title">Steins;Gate</span>
+                        <button class="watch-btn">▶ Watch Now</button>
+
+                    </div>
+                    <div class="rank-info">
+                        <h3>Steins;Gate</h3>
+                        <p class="rank-genre">Sci-Fi · Thriller</p>
+                    </div>
+                </div>
+
+                <div class="anime-card">
+                    <div class="anime-poster poster-1">
+                        <img src="https://i.pinimg.com/1200x/2e/9a/da/2e9adadb60925d78b32c3a1cabd3551f.jpg" alt="no image">
+                        <span class="poster-title">Re:Zero</span>
+                        <button class="watch-btn">▶ Watch Now</button>
+
+                    </div>
+                    <div class="rank-info">
+                        <h3>Re:Zero</h3>
+                        <p class="rank-genre">Fantasy · Drama</p>
+                    </div>
+                </div>
+
+                <div class="anime-card">
+                    <div class="anime-poster poster-2">
+                        <img src="https://i.pinimg.com/736x/e1/cb/80/e1cb803e11a2969806d5141bdabb3aaf.jpg" alt="no image">
+                        <span class="poster-title">Haikyuu!!</span>
+                        <button class="watch-btn">▶ Watch Now</button>
+
+                    </div>
+                    <div class="rank-info">
+                        <h3>Haikyuu!!</h3>
+                        <p class="rank-genre">Sports · Comedy</p>
+                    </div>
+                </div>
+
+                <div class="anime-card">
+                    <div class="anime-poster poster-3">
+                        <img src="https://i.pinimg.com/736x/c8/8d/53/c88d53cea1b6c7a30e28a8472e6e8327.jpg" alt="no image">
+                        <span class="poster-title">Dr. Stone</span>
+                        <button class="watch-btn">▶ Watch Now</button>
+
+                    </div>
+                    <div class="rank-info">
+                        <h3>Dr. Stone</h3>
+                        <p class="rank-genre">Adventure · Sci-Fi</p>
+                    </div>
+                </div>
+
+                <div class="anime-card">
+                    <div class="anime-poster poster-4">
+                        <img src="https://i.pinimg.com/736x/7d/8a/2d/7d8a2dc3d604bf93fc903f24916269ed.jpg" alt="no image">
+                        <span class="poster-title">Tokyo Revengers</span>
+                        <button class="watch-btn">▶ Watch Now</button>
+
+                    </div>
+                    <div class="rank-info">
+                        <h3>Tokyo Revengers</h3>
+                        <p class="rank-genre">Drama · Supernatural</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="site-footer">
+        <div class="container-fluid">
+            <div class="footer-row">
+                <a class="navbar-brand" href="#">Ani<span class="brand-accent">Verse</span></a>
+                <p class="footer-text">Built for the love of anime. All titles belong to their respective creators
+                    and studios.</p>
+            </div>
+             <div class="socialIcons">
+                    <ul class="List">
+                        <a class="smLink" href="https://www.facebook.com/" target="_blank"> <i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a class="smLink" href="https://www.instagram.com/" target="_blank"> <i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a class="smLink" href="https://www.pinterest.com/" target="_blank"><i
+                                class="fa-brands fa-pinterest"></i></a>
+                    </ul>
+                </div>
+              
+            </div>
+        </div>
+    </footer>
+    <p id="footer" >&copy; 2026 Travora Travel Agency, All rights reserved.</p>
+
 </body>
+<!-- bootstrap cdn script  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
 </html>

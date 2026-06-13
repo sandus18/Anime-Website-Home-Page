@@ -1,0 +1,645 @@
+/* ===================================================
+   AniVerse — design tokens
+   =================================================== */
+:root {
+    --bg: #0a0a12;
+    --bg-elev: #14141f;
+    --bg-elev-2: #1c1c2b;
+    --accent: #ff3355;
+    --accent-2: #ffc857;
+    --accent-3: #6c5ce7;
+    --accent-4: #2bd9a3;
+    --text: #f5f5fa;
+    --text-muted: #9496ab;
+    --border: rgba(255, 255, 255, 0.08);
+
+    --font-display: "Bebas Neue", "Arial Narrow", sans-serif;
+    --font-body: "Outfit", "Segoe UI", sans-serif;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    padding-top: 76px;
+}
+
+/* ===================================================
+   Navbar
+   =================================================== */
+.navbar {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.9rem 1.5rem;
+    background: rgba(10, 10, 18, 0.65);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar-brand {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    letter-spacing: 0.06em;
+    color: var(--text) !important;
+}
+
+.brand-accent {
+    color: var(--accent);
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-muted) !important;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: var(--text) !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--accent) !important;
+}
+
+.dropdown-menu {
+    background-color: var(--bg-elev-2);
+    border: 1px solid var(--border);
+}
+
+.dropdown-item {
+    color: var(--text-muted);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: var(--bg-elev);
+    color: var(--text);
+}
+
+.search-form .form-control {
+    background-color: var(--bg-elev);
+    border: 1px solid var(--border);
+    color: var(--text);
+    min-width: 200px;
+}
+
+.search-form .form-control:focus {
+    background-color: var(--bg-elev);
+    color: var(--text);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 0.2rem rgba(255, 51, 85, 0.2);
+}
+
+.search-form .form-control::placeholder {
+    color: var(--text-muted);
+}
+
+/* ===================================================
+   Hero carousel
+   =================================================== */
+.hero-carousel {
+    background-color: var(--bg-elev);
+}
+
+.carousel-row {
+    display: flex;
+    align-items: stretch;
+    min-height: 560px;
+}
+
+.carouselImage,
+.carouselContent {
+    width: 50%;
+}
+
+.carouselImage {
+    overflow: hidden;
+    position: relative;
+}
+
+.carouselImage::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(10, 10, 18, 0.35), transparent);
+}
+
+.carouselImage img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carouselContent {
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem 4rem;
+}
+
+.contentEyebrow {
+    display: inline-block;
+    color: var(--accent-2);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.contentHeading {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1;
+    letter-spacing: 0.04em;
+    margin: 0;
+}
+
+.contentPara {
+    color: var(--text-muted);
+    max-width: 480px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.contentTags {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tag {
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+}
+
+.contentButton {
+    margin-top: 0.5rem;
+    background-color: var(--accent);
+    color: var(--text);
+    border: none;
+    padding: 0.85rem 2.4rem;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.contentButton:hover {
+    background-color: #ff5570;
+    transform: translateY(-2px);
+}
+
+/* carousel controls + indicators */
+.hero-carousel .carousel-control-prev,
+.hero-carousel .carousel-control-next {
+    width: 4rem;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.hero-carousel .carousel-control-prev:hover,
+.hero-carousel .carousel-control-next:hover {
+    opacity: 1;
+}
+
+.hero-carousel .carousel-indicators [data-bs-target] {
+    background-color: var(--accent);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0.4;
+    border: none;
+}
+
+.hero-carousel .carousel-indicators .active {
+    opacity: 1;
+}
+
+/* ===================================================
+   Top 10 section
+   =================================================== */
+.top-ten {
+    padding: 4rem 0 5rem;
+    background-color: var(--bg);
+}
+
+.top-ten-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0 3rem 2.5rem;
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    letter-spacing: 0.04em;
+    margin: 0;
+}
+
+.top-ten-carousel {
+    padding: 0 3rem;
+}
+
+.rank-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 0.5rem 0 1.5rem;
+}
+
+/* carousel controls for top-ten */
+.top-ten-carousel .carousel-control-prev,
+.top-ten-carousel .carousel-control-next {
+    width: 3rem;
+    height: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--bg-elev-2);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    opacity: 0.85;
+    transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.top-ten-carousel .carousel-control-prev {
+    left: -1.5rem;
+}
+
+.top-ten-carousel .carousel-control-next {
+    right: -1.5rem;
+}
+
+.top-ten-carousel .carousel-control-prev:hover,
+.top-ten-carousel .carousel-control-next:hover {
+    opacity: 1;
+    background-color: var(--accent);
+}
+
+.top-ten-carousel .carousel-control-prev-icon,
+.top-ten-carousel .carousel-control-next-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.rank-card {
+    position: relative;
+    flex: 0 0 auto;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.5rem;
+}
+
+.rank-number {
+    position: absolute;
+    top: -0.6rem;
+    left: -0.7rem;
+    font-family: var(--font-display);
+    font-size: 6.5rem;
+    line-height: 1;
+    font-weight: 400;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--border);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.rank-poster {
+    position: relative;
+    z-index: 1;
+    height: 260px;
+    border-radius: 8px;
+    margin-left: 2.5rem;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+    transition: transform 0.25s ease;
+}
+
+.rank-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.rank-poster::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.2),
+            transparent);
+}
+
+.rank-card:hover .rank-poster {
+    transform: translateY(-6px);
+}
+
+.rank-card:hover .rank-number {
+    -webkit-text-stroke: 2px var(--accent);
+}
+
+.poster-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.92);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    z-index: 2;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.poster-1 {
+    background: linear-gradient(150deg, var(--accent) 0%, #5e0f1f 100%);
+}
+
+.poster-2 {
+    background: linear-gradient(150deg, var(--accent-3) 0%, #1f1a3d 100%);
+}
+
+.poster-3 {
+    background: linear-gradient(150deg, var(--accent-4) 0%, #0f3d33 100%);
+}
+
+.poster-4 {
+    background: linear-gradient(150deg, var(--accent-2) 0%, #4d3a0a 100%);
+}
+
+.poster-5 {
+    background: linear-gradient(150deg, #ff7a45 0%, #4a1d0c 100%);
+}
+
+.poster-6 {
+    background: linear-gradient(150deg, #4d9bff 0%, #0d2747 100%);
+}
+
+.rank-info {
+    margin-left: 2.5rem;
+    margin-top: 0.9rem;
+}
+
+.rank-info h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.rank-genre {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin: 0.2rem 0 0;
+}
+
+
+/* ===================================================
+   Browse grid section
+   =================================================== */
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 2rem;
+    padding: 0.5rem 3rem 1.5rem;
+}
+
+.anime-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.anime-poster {
+    position: relative;
+    height: 260px;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.anime-card:hover .anime-poster {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.55);
+}
+
+.anime-rating {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    background: rgba(10, 10, 18, 0.55);
+    backdrop-filter: blur(6px);
+    color: var(--accent-2);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+}
+
+.anime-card .rank-info {
+    margin-left: 0;
+    margin-top: 0.9rem;
+}
+
+/*  */
+.anime-card {
+    width: 260px;
+    background: #0b1020;
+    border-radius: 15px;
+    overflow: hidden;
+    color: white;
+}
+
+.anime-poster {
+    position: relative;
+    height: 350px;
+}
+
+.anime-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.poster-title {
+    position: absolute;
+    bottom: 60px;
+    left: 15px;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.watch-btn {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #ff4d6d;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.watch-btn:hover {
+    background: #ff3355;
+}
+
+.rank-info {
+    padding: 15px;
+}
+
+.rank-info h3 {
+    margin-bottom: 5px;
+}
+
+.rank-genre {
+    color: #bdbdbd;
+}
+
+/* ===================================================
+   Footer
+   =================================================== */
+.site-footer {
+    border-top: 1px solid var(--border);
+    padding: 2.5rem 0;
+    background-color: var(--bg-elev);
+}
+
+.footer-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0 3rem;
+}
+
+.footer-text {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin: 0;
+}
+#footer {
+    text-align: center;
+        width: 100%;
+    font-size: 10px;
+    color: white;
+}
+.smLink{
+    color:var(--text-muted)
+}
+/* ===================================================
+   Responsive
+   =================================================== */
+@media (max-width: 991px) {
+    .carousel-row {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .carouselImage,
+    .carouselContent {
+        width: 100%;
+    }
+
+    .carouselImage {
+        height: 280px;
+        order: -1;
+    }
+
+    .carouselImage.order-lg-1,
+    .carouselContent.order-lg-2 {
+        order: -1;
+    }
+
+    .carouselContent {
+        padding: 2rem 1.5rem;
+    }
+
+    .top-ten-header {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .top-ten-carousel {
+        padding: 0 1.5rem;
+    }
+
+    .footer-row {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .contentHeading {
+        font-size: 2.6rem;
+    }
+
+    .contentPara {
+        font-size: 0.95rem;
+    }
+
+    .rank-card {
+        width: 170px;
+    }
+
+    .rank-poster {
+        height: 230px;
+    }
+
+    .rank-number {
+        font-size: 5rem;
+    }
+
+    .top-ten-carousel .carousel-control-prev {
+        left: 0.25rem;
+    }
+
+    .top-ten-carousel .carousel-control-next {
+        right: 0.25rem;
+    }
+}
